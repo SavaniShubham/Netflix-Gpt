@@ -2,6 +2,9 @@
 
 --create react app
 --configure Tailwindcss
+--Header
+--Lofin Form
+--Sign Up form
 
 # Features
 
@@ -11,7 +14,7 @@
 --Browse (after authentication)
  -Header
  -Main Movie
-   =Tailer in the background
+   -Tailer in the background
    -Title and Descripition
    -Movie Suggestions
      =Movielist * N
