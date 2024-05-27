@@ -1,13 +1,31 @@
-import React, { useState } from 'react';
+import React, { useRef, useState } from 'react';
 import Header from '../components/Header';
+import { checkvaliddata } from '../utils/validate';
 
 const Login = () => {
 
   const [issign,setsign]=useState(true);
+  const name = useRef(null);
+  const email =useRef(null);
+  const password =useRef(null);
+  const [errormsg,seterrormsg]=useState(null);
   const toggleform = ()=>
     {
         setsign(!issign);
     }
+    const handlebtnclick=()=>
+      {
+        //validate the form data 
+       console.log(email.current.value);
+       console.log(password.current.value);
+
+       const msg =checkvaliddata(email.current.value , password.current.value);
+       seterrormsg(msg);
+       
+    
+
+       //sign in //signup
+      }
   return (
     <div>
         <Header/>
@@ -19,18 +37,18 @@ const Login = () => {
         
        
            
-             <form className=' absolute w-1/4 p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-70'>
+             <form onSubmit={(e)=>e.preventDefault()} className=' absolute w-1/4 p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-70'>
               <h1 className='mx-2 font-bold text-3xl pb-4'>{issign ? "Sign In":"Sign Up"}</h1>
-              {!issign && <input type='text' placeholder='Full Name'
+              {!issign && <input ref={name} type='text' placeholder='Full Name'
                      className='p-4 mx-2 my-2 w-11/12 rounded-md bg-gray-900 border'/>}
-              { issign ? (<input type='text' placeholder='Email or mobile number'
-                     className='p-4 mx-2 my-2 w-11/12 rounded-md bg-gray-900 border'/>) :
-                     (<input type='text' placeholder='Email '
+               <input ref={email} type='text' placeholder='Email Address'
                      className='p-4 mx-2 my-2 w-11/12 rounded-md bg-gray-900 border'/>
-                     )}
-              <input type='password' placeholder='Password'
+
+              <input ref={password} type='password' placeholder='Password'
                       className='p-4 mx-2 my-2 w-11/12 rounded-md  bg-gray-900 border'/>
-              <button className='p-2 mx-2 my-2 bg-red-600 w-11/12 rounded-md'>{issign ? "Sign In":"Sign Up"}</button>
+              <p className='p-2 text-red-800 font-bold text-lg'>{errormsg}</p>
+              <button className='p-2 mx-2 my-2 bg-red-600 w-11/12 rounded-md'
+              onClick={ ()=>{  handlebtnclick(); }}>{issign ? "Sign In":"Sign Up"}</button>
               <p className=' p-2 cursor-pointer' onClick={toggleform}>
               {issign ? "New to Netflix? Sign up now.":"Already Registered ? Sign In now."}</p>
 
