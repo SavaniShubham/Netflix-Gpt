@@ -24,3 +24,9 @@
 //set up firebase (it use for backend of the app) after all the set up (carefully do that) deploy the app into firebase
 //now create sigin / signup logic (therefore copy-paste the code of it from firebase authenetication documentation (password authe..)) do some changes in it (use can show that details in firebase -> authe..->users and in console also)
 //now we push that user object (user all the data ) into redux 
+
+//set up the redux the n add the user ojbect into redux thertefor two ways first - dispatch the action at signin/signup etc.. where you use /get the user . second - firebase give one more api onAuthStateChanged() it is called automatically whhne the some change /upadatation done withe authorization (in like signin/signup/sginout etc..) so  we call dispatch inside it ,we call it in inside userEccect in Body.js 
+
+//one hook useNevigate() is given by the reat-router-dom it is use to navigate to that page/ component(we us it inside Login.js)
+
+//crate signout as above in Header.js

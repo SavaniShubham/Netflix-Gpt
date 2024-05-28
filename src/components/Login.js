@@ -4,6 +4,9 @@ import { checkvaliddata } from '../utils/validate';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 import {  signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from '../utils/firebase';
+// import { useDispatch } from 'react-redux';
+// import { adduser } from '../utils/userslice';
+import { useNavigate } from 'react-router-dom';
 
 const Login = () => {
 
@@ -12,6 +15,9 @@ const Login = () => {
   const email =useRef(null);
   const password =useRef(null);
   const [errormsg,seterrormsg]=useState(null);
+  // const dispatch = useDispatch();
+  const navigate = useNavigate();
+
   const toggleform = ()=>
     {
         setsign(!issign);
@@ -37,13 +43,16 @@ const Login = () => {
            // Signed up 
            const user = userCredential.user;
            console.log(user);
-           // ...
+          //  dispatch(adduser(user));
+          navigate("/browse");
+           
          })
          .catch((error) => {
            const errorCode = error.code;
            const errorMessage = error.message;
            seterrormsg(errorCode + errorMessage);
-           // ..
+           
+          
          });
         }
         else
@@ -54,7 +63,9 @@ const Login = () => {
             // Signed in 
               const user = userCredential.user;
               console.log(user);
-               // ...
+              //  dispatch(adduser(user));
+              navigate("/browse");
+              
                           })
            .catch((error) => {
               const errorCode = error.code;
