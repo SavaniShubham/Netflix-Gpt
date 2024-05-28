@@ -18,3 +18,9 @@
 //same we can do for name also
 //we use useRef() hook for getting the data(referencing the data) from inputbox (we can also do it with local variable but when you don't need to use of the storage data the use useRef() hook inlike button value , input value etc.. ) 
 //form alwalys submit and page reloaded we you click on the submit btn of form for not reloaded the page every time when submit the btn write e.prventDefault() at form
+
+
+
+//set up firebase (it use for backend of the app) after all the set up (carefully do that) deploy the app into firebase
+//now create sigin / signup logic (therefore copy-paste the code of it from firebase authenetication documentation (password authe..)) do some changes in it (use can show that details in firebase -> authe..->users and in console also)
+//now we push that user object (user all the data ) into redux 

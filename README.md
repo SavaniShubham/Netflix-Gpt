@@ -10,6 +10,7 @@
 --useRef hook
 --firebasse setup
 --Deploying our app to production
+--create signup user account(in firebase)
 
 # Features
 
@@ -22,7 +23,7 @@
    -Tailer in the background
    -Title and Descripition
    -Movie Suggestions
-     =Movielist * N
+     -Movielist * N
 
 -NETFLIXGPT
   -Search Bar
