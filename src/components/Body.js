@@ -16,8 +16,8 @@ const Body = () => {
       if (user) {
         //this part is called when signin/signup done 
        
-        const {uid , email ,displayName} = user;
-        dispatch(adduser({uid : uid , email :email , displayName : displayName }));
+        const {uid , email ,displayName , photoURL} = user;
+        dispatch(adduser({uid : uid , email :email , displayName : displayName ,photoURL :photoURL}));
        
       } else {
         //this part is called when signed out done 

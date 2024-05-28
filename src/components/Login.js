@@ -7,6 +7,10 @@ import { auth } from '../utils/firebase';
 // import { useDispatch } from 'react-redux';
 // import { adduser } from '../utils/userslice';
 import { useNavigate } from 'react-router-dom';
+import {  updateProfile } from "firebase/auth";
+import { useDispatch } from 'react-redux';
+import { adduser} from '../utils/userslice';
+
 
 const Login = () => {
 
@@ -17,6 +21,7 @@ const Login = () => {
   const [errormsg,seterrormsg]=useState(null);
   // const dispatch = useDispatch();
   const navigate = useNavigate();
+  const dispatch = useDispatch();
 
   const toggleform = ()=>
     {
@@ -42,9 +47,24 @@ const Login = () => {
          .then((userCredential) => {
            // Signed up 
            const user = userCredential.user;
+             //now update the user
+             updateProfile(user , {
+              displayName: name.current.value , photoURL:"https://i.pinimg.com/564x/51/97/3b/51973b117680fd21b50841ab6644d311.jpg"
+            }).then(() => {
+              //also update the redux store data of user
+              const {uid , email ,displayName , photoURL} = auth.currentUser;
+              dispatch(adduser({uid : uid , email :email , displayName : displayName ,photoURL :photoURL}));
+
+              // Profile updated!
+              navigate("/browse");
+            }).catch((error) => {
+              // An error occurred
+              seterrormsg(error.message);
+            });
+
            console.log(user);
           //  dispatch(adduser(user));
-          navigate("/browse");
+        
            
          })
          .catch((error) => {

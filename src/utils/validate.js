@@ -30,3 +30,6 @@
 //one hook useNevigate() is given by the reat-router-dom it is use to navigate to that page/ component(we us it inside Login.js)
 
 //crate signout as above in Header.js
+
+//then we upadate the profile (with name and photo ) after the doing sign up (in the Login.js)
+//in that we fix one issue - upadate the redux store data (before that our profilepic is not displayed)
