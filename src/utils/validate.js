@@ -35,3 +35,8 @@
 //in that we fix one issue - upadate the redux store data (before that our profilepic is not displayed)
 
 //we do bug fix that if user is logged in it redirect to browse page from login page and vice versa (for that move useEffect()onauth to HEader  becuase we can't do nevigate from parent (aslo remove all the nevigate and just write it in onauth only) )
+
+//now bulding the browse page therefre the data set up tmdb(in that do login , create app , and get access token )
+//in tmdb -> documentation -> api refernece->movielist->nowplaying->fetch request (inn that whenever we do api call we always pass options copy paste it in constant )
+//and then the fetch data in browse and upadte the store (crate movieslice and add data in it of nowplayingmovie)
+//for simpilecity in  code create customhook (useNowolayingmovies) and use it in browse 
