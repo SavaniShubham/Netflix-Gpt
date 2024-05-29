@@ -33,3 +33,5 @@
 
 //then we upadate the profile (with name and photo ) after the doing sign up (in the Login.js)
 //in that we fix one issue - upadate the redux store data (before that our profilepic is not displayed)
+
+//we do bug fix that if user is logged in it redirect to browse page from login page and vice versa (for that move useEffect()onauth to HEader  becuase we can't do nevigate from parent (aslo remove all the nevigate and just write it in onauth only) )
