@@ -1,7 +1,9 @@
-
+import React from 'react';
 import Header  from './Header';
 
 import useNowplayingmovies from "../customhooks/useNowplayingmovies";
+import Mainconatiner from './Mainconatiner';
+import Secondarycontainer from './Secondarycontainer';
 
 const Browse = () => {
 
@@ -12,6 +14,15 @@ const Browse = () => {
   return (
     <div>
       <Header/>
+      {/* mainconatiner
+          -videoBackground
+          -videotitle
+        secondary conatiner
+         -movielist * n
+           -cards * n
+      */}
+      <Mainconatiner/>
+      {/* <Secondarycontainer/> */}
     
      </div>
   )
