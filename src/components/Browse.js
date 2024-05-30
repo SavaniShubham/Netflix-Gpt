@@ -13,14 +13,7 @@ const Browse = () => {
 
   return (
     <div>
-      <Header/>
-      {/* mainconatiner
-          -videoBackground
-          -videotitle
-        secondary conatiner
-         -movielist * n
-           -cards * n
-      */}
+      <Header/> 
       <Mainconatiner/>
       {/* <Secondarycontainer/> */}
     

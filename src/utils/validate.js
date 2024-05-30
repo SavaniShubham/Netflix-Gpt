@@ -40,3 +40,15 @@
 //in tmdb -> documentation -> api refernece->movielist->nowplaying->fetch request (inn that whenever we do api call we always pass options copy paste it in constant )
 //and then the fetch data in browse and upadte the store (crate movieslice and add data in it of nowplayingmovie)
 //for simpilecity in  code create customhook (useNowolayingmovies) and use it in browse 
+
+//create browse page   
+//  mainconatiner
+//   -videoBackground
+//   -videotitle
+//   -secondary conatiner
+//    -movielist * n
+//    -cards * n
+//in mainconatiner -- (get from store movies ) pass title , overview in videotitle and id in videobackground
+//in the videotitle display
+//in the videobackground (do video api call and then add that into store and display this )
+      

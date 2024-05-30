@@ -7,6 +7,8 @@ import useMovietrailer from '../customhooks/useMovietrailer';
 const Videobackground = ({movieid}) => {
    
     const trailervideo =useSelector(store => store.movies.trailervideo);
+
+    //fetch trailer video and update the store with trailer video data 
     useMovietrailer(movieid);
    
   return (

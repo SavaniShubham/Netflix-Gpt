@@ -6,7 +6,7 @@ import { useEffect } from "react";
 
 const useMovietrailer = (movieid) =>
     {
-
+//fetch trailer video and update the store with trailer video data 
     
 const dispatch =useDispatch();
 
