@@ -50,7 +50,7 @@ const Header = () => {
   return (
 
 
-    <div className='absolute w-screen px-28 top-2 z-10 flex justify-between  '>
+    <div className='absolute w-screen px-28 top-2 z-20 flex justify-between  '>
       <img className='w-48' src={Logo} alt='Netflix logo'></img>
 
       {user && (<div className='flex pt-2' >

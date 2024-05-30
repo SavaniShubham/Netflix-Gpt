@@ -50,5 +50,8 @@
 //    -cards * n
 //in mainconatiner -- (get from store movies ) pass title , overview in videotitle and id in videobackground
 //in the videotitle display
-//in the videobackground (do video api call and then add that into store and display this )
+//in the videobackground (do video api call and then add that into store and display this (embbed the youtube video ) )
+//do css in it play the video in backgroud 
+//for play the video automatically (add autoplay=1&&mute=1)
+
       
