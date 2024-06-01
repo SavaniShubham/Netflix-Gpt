@@ -54,4 +54,7 @@
 //do css in it play the video in backgroud 
 //for play the video automatically (add autoplay=1&&mute=1)
 
+//buid seconary conatiner in the for fetching the data and store the data in redux store create custom hook call them and pass this data to create movielist and movicard
+//do this for all category(now playing , popular , top rated , upcoming (fetch data from tmdb))
+
       
