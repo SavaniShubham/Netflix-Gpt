@@ -10,7 +10,7 @@ import { auth } from '../utils/firebase';
 import {  updateProfile } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { adduser} from '../utils/userslice';
-import { USER_AVATAR } from '../utils/constant';
+import { BG_IMG, USER_AVATAR } from '../utils/constant';
 
 
 const Login = () => {
@@ -105,7 +105,7 @@ const Login = () => {
        
             <div className=' absolute'>
             <div className=' absolute inset-0 bg-black bg-opacity-45'></div>
-            <img  src='https://assets.nflxext.com/ffe/siteui/vlv3/a99688ca-33c3-4099-9baa-07a2e2acb398/ca15fd28-b624-4852-8bfe-9cdd5c88475d/IN-en-20240520-popsignuptwoweeks-perspective_alpha_website_large.jpg' alt='Background '></img>
+            <img  src={BG_IMG} alt='Background '></img>
             </div>
         
        

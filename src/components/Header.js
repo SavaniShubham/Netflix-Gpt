@@ -7,12 +7,15 @@ import  { useEffect } from 'react';
 import { onAuthStateChanged } from "firebase/auth";
 import { useDispatch } from 'react-redux';
 import { adduser, removeuser } from '../utils/userslice';
-import { Logo } from '../utils/constant';
+import { Logo, SUPPORTED_LANG } from '../utils/constant';
+import { toggleGptsearchview } from '../utils/gptslice';
+import { changeLanguage } from '../utils/configslice';
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector(store => store.user);
   const dispatch = useDispatch();
+  const showgptsearch  = useSelector(store =>store.gpt.showgptsearch );
   const handlesignout= ()=>
     {
      
@@ -45,6 +48,14 @@ const Header = () => {
 
         return ()=> unsubscribe(); //this will call when component unmounts
       },[]);
+      const handlegptsearch = ()=>
+        {
+          dispatch(toggleGptsearchview());
+        }
+        const handlelangchange = (e)=>
+          {
+              dispatch(changeLanguage(e.target.value));
+          }
 
 
   return (
@@ -54,8 +65,23 @@ const Header = () => {
       <img className='w-48' src={Logo} alt='Netflix logo'></img>
 
       {user && (<div className='flex pt-2' >
+          {showgptsearch &&
+           (<select className=' p-2 m-2 h-12 bg-gray-800 text-white rounded-md' onChange={handlelangchange} >
+                 {
+                 SUPPORTED_LANG.map((lang)=>
+                 <option 
+                 key={lang.identifier} 
+                 value={lang.identifier}>{lang.name}
+                 </option> )
+                 }
+         </select>)}
+        
+        <button className=' px-4 h-12 bg-green-700 my-2  mx-4 rounded-lg text-white'
+        onClick={handlegptsearch}>
+          {showgptsearch ? "HomePage" : "GPT Search"}
+          </button>
       <img className='w-12 h-12 mr-3 ' src={user?.photoURL} alt='Profile'></img>
-            <button  onClick={handlesignout} className='font-semibold text-xl'>Sign Out</button>
+            <button  onClick={handlesignout} className='font-semibold text-xl text-white'>Sign Out</button>
        </div>)}
     </div>
   )

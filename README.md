@@ -35,6 +35,10 @@
 --tmdb image cdn url
 --made the browse page amazing with tailwind css
 --useNowplayingmovies , usePopularmovies , useTopratedmovies , useUpcomingmovies custom hook
+--GPT search page
+--GPT searchbar
+--* Multi - language feature in app
+
 
 
 

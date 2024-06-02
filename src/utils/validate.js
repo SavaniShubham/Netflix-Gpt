@@ -57,4 +57,11 @@
 //buid seconary conatiner in the for fetching the data and store the data in redux store create custom hook call them and pass this data to create movielist and movicard
 //do this for all category(now playing , popular , top rated , upcoming (fetch data from tmdb))
 
+//now build the gpt featuree in app (build gptsearch -> gptsearchbar , gptmoviessuggestions)
+//and make showgpttoggle in browse
+
+//make the gpt page multi-langauage support 
+//first make all the  variable constant and dynamic (constant-> support_lang , utils->languageconstant )
+//then for select the language in header create selecte option formmaking this dynamic crate configslice and link this all thing and use this to gptsearch bar 
+
       
