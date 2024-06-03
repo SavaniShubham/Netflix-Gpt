@@ -15,13 +15,13 @@ export const API_options = {
     }
   };
 
-export const IMG_cdn_URL="https://image.tmdb.org/t/p/w500";
+export const IMG_cdn_URL="https://image.tmdb.org/t/p/w500/";
 
 export const SUPPORTED_LANG =[ {identifier : "en", name : "English"} ,{identifier : "hindi", name : "Hindi"},
                          {identifier : "guj", name : "Gujarati"} ];
 
 
 
-
+//const OPENAI_KEY="remove the key ";
         
 export const GEMINI_KEY ="AIzaSyA_SPwSPJeQjasIRf1WFJNMUDVMbHHdP6g";

@@ -76,5 +76,7 @@
 //then read documnetation first install npm @google/generative-ai and then do congigration in gemeniapi.js
 //then as above pass gptquery in that funcation which is copy - patse from documentation
 //now it will give response
+//now fetch the data for that each movie in gptmoviesuggestion.js(therfore first put the data in gptslice to get the data in it)
+
 
       
