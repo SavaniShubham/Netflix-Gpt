@@ -19,3 +19,11 @@ export const IMG_cdn_URL="https://image.tmdb.org/t/p/w500";
 
 export const SUPPORTED_LANG =[ {identifier : "en", name : "English"} ,{identifier : "hindi", name : "Hindi"},
                          {identifier : "guj", name : "Gujarati"} ];
+
+
+export  const OPENAI_KEY="sk-proj-A2ZXZb9ytvLBsThaJuvOT3BlbkFJYseH0SuNLqXaSW97nROr";
+// export  const OPENAI_KEY ="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";
+//  export const OPENAI_KEY = "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";
+
+
+export const GEMINI_KEY ="AIzaSyA_SPwSPJeQjasIRf1WFJNMUDVMbHHdP6g";

@@ -64,4 +64,17 @@
 //first make all the  variable constant and dynamic (constant-> support_lang , utils->languageconstant )
 //then for select the language in header create selecte option formmaking this dynamic crate configslice and link this all thing and use this to gptsearch bar 
 
+//first get api key from openai platform copy paste it in constant.js
+//then as par documentation install npm openai and confiure it(openai.js)
+//now get the response for the search write proprt prompt (gptquery) then pass it in the await (this code will copy-paste from documentation) //
+//but this will not run give error (first error solve it by  dangerouslyAllowBrowser: true in openai.js)
+//but in openai thhe apikey is not free and it is not working give error of (429 : no more cradit )
+
+
+//so we use gemini api key 
+//for that same as above get api key (from google develop studio ) and copy paste in constant
+//then read documnetation first install npm @google/generative-ai and then do congigration in gemeniapi.js
+//then as above pass gptquery in that funcation which is copy - patse from documentation
+//now it will give response
+
       
