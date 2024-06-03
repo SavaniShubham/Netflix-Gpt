@@ -23,5 +23,5 @@ export const SUPPORTED_LANG =[ {identifier : "en", name : "English"} ,{identifie
 
 
 
-
+        
 export const GEMINI_KEY ="AIzaSyA_SPwSPJeQjasIRf1WFJNMUDVMbHHdP6g";
