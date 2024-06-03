@@ -1,8 +1,8 @@
 import React, { useRef } from 'react'
 import lang from '../utils/languageconstant';
 import { useSelector } from 'react-redux';
-import openai from '../utils/openai';
-import { model , genAI } from '../utils/geminiai';
+// import openai from '../utils/openai';
+import { model  } from '../utils/geminiai';
 
 const Gptsearchbar = () => {
     const selectlang = useSelector(store => store.config.language);
