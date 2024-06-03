@@ -10,12 +10,15 @@ import { adduser, removeuser } from '../utils/userslice';
 import { Logo, SUPPORTED_LANG } from '../utils/constant';
 import { toggleGptsearchview } from '../utils/gptslice';
 import { changeLanguage } from '../utils/configslice';
+import { togglemoviedetailsview } from '../utils/movieslice';
 
 const Header = () => {
   const navigate = useNavigate();
   const user = useSelector(store => store.user);
   const dispatch = useDispatch();
   const showgptsearch  = useSelector(store =>store.gpt.showgptsearch );
+  const showmoviedetails = useSelector(store => store.movies.showmoviedetails);
+
   const handlesignout= ()=>
     {
      
@@ -51,11 +54,16 @@ const Header = () => {
       const handlegptsearch = ()=>
         {
           dispatch(toggleGptsearchview());
+          showmoviedetails  && dispatch(togglemoviedetailsview());
         }
         const handlelangchange = (e)=>
           {
               dispatch(changeLanguage(e.target.value));
           }
+          const handlebrowse = ()=>
+            {
+              showmoviedetails  && dispatch(togglemoviedetailsview());
+            }
 
 
   return (
@@ -75,6 +83,8 @@ const Header = () => {
                  </option> )
                  }
          </select>)}
+        {showmoviedetails && <button className=' px-4 h-12 bg-green-700 my-2  mx-4 rounded-lg text-white'
+        onClick={handlebrowse}>browse</button>}
         
         <button className=' px-4 h-12 bg-green-700 my-2  mx-4 rounded-lg text-white'
         onClick={handlegptsearch}>

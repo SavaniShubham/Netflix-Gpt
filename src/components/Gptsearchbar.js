@@ -53,10 +53,6 @@ const Gptsearchbar = () => {
        const tmdbresults = await Promise.all(promisearray);
        console.log(tmdbresults);
        dispatch(addgeminiMovieresult({ movienames :geminimovielist ,movieresult : tmdbresults}));
-       
-
-    
-  
 
       }
 

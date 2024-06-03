@@ -10,6 +10,9 @@ const movieslice = createSlice(
             popularmovies:null,
             topratedmovies:null,
             upcomingmovies:null,
+            moviepagedata:null,
+            showmoviedetails:false ,
+            moviecredit : null,
         },
         reducers:{
           addnowplayingmovies : (state,action)=>
@@ -31,10 +34,28 @@ const movieslice = createSlice(
             addtrailervideo : (state , action)=>
                 {
                     state.trailervideo = action.payload;
-                }
+                },
+             addmoviepagedata : (state , action)=>
+                    {
+                        state.moviepagedata = action.payload;
+                    },
+             togglemoviedetailsview : (state )=>
+                        {
+                            state.showmoviedetails =! state.showmoviedetails;
+                        },
+              addmoviepagecredit : (state , action)=>
+                            {
+                                state.moviecredit = action.payload;
+                            },
+                clearmoviepageall :(state)=>
+                    {
+                        state.moviecredit=null;
+                        state.showmoviedetails=false;
+                        state.moviepagedata=null;
+                    }
         }
     }
 );
 
-export const {addnowplayingmovies , addtrailervideo , addpopularmovies , addtopratedmovies , addupcomingmovies }=movieslice.actions ;
+export const {addnowplayingmovies , addtrailervideo , addpopularmovies , addtopratedmovies , addupcomingmovies  , addmoviepagedata , togglemoviedetailsview , addmoviepagecredit , clearmoviepageall }=movieslice.actions ;
 export default movieslice.reducer ;

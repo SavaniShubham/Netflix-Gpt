@@ -1,6 +1,7 @@
 import React from 'react'
 import Moviecard from './Moviecard';
 
+
 const Movielist = ({title , movies}) => {
     console.log(movies);
 
@@ -12,7 +13,11 @@ const Movielist = ({title , movies}) => {
         <div className='flex'>  
 
             { movies?.map( (movie) => (
-               <Moviecard key={movie.id} posterpath = {movie.poster_path}/>
+              
+       
+               <Moviecard key={movie.id} posterpath = {movie.poster_path}  showmovie= {movie}/>
+               
+             
             )
           )
             }
