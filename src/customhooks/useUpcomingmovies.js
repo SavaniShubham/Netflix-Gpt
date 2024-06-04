@@ -5,11 +5,12 @@ import  { useEffect } from 'react';
 import { API_options} from '../utils/constant';
 
 import { addupcomingmovies } from '../utils/movieslice';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 
 const useUpcomingrmovies = ()=> {
  //fetch data from movie api and update the store
     const dispatch = useDispatch();
+    const upcomingmovies = useSelector(store=>store.movies.upcomingmovies);
     const getupcomingmovies = async ()=>
       {
          const data = await fetch('https://api.themoviedb.org/3/movie/upcoming?page=1', API_options);
@@ -19,7 +20,7 @@ const useUpcomingrmovies = ()=> {
       }
       useEffect(()=>
       {
-        getupcomingmovies();
+       !upcomingmovies && getupcomingmovies();
   
       },[]);
 };

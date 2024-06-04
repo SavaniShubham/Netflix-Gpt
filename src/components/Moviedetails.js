@@ -25,7 +25,7 @@ const Moviedetails = () => {
     }
       useEffect ( ()=>
       {
-        moviecredited(id);
+         !moviecredit && moviecredited(id);
 
 
         return (()=> dispatch(clearmoviepageall()));
