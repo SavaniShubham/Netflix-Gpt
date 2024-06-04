@@ -69,12 +69,12 @@ const Header = () => {
   return (
 
 
-    <div className='absolute w-screen px-28 top-2 z-20 flex justify-between  '>
-      <img className='w-48' src={Logo} alt='Netflix logo'></img>
+    <div className='absolute w-screen  px-28 top-2 z-20 flex flex-col  md:flex-row justify-between  '>
+      <img className=' w-48' src={Logo} alt='Netflix logo'></img>
 
-      {user && (<div className='flex pt-2' >
+      {user && (<div className='flex  pt-2 ' >
           {showgptsearch &&
-           (<select className=' p-2 m-2 h-12 bg-gray-800 text-white rounded-md' onChange={handlelangchange} >
+           (<select className='m-1 p-1 md:p-2 md:m-2 md:h-12 bg-gray-800 text-white rounded-md' onChange={handlelangchange} >
                  {
                  SUPPORTED_LANG.map((lang)=>
                  <option 
@@ -83,15 +83,15 @@ const Header = () => {
                  </option> )
                  }
          </select>)}
-        {showmoviedetails && <button className=' px-4 h-12 bg-green-700 my-2  mx-4 rounded-lg text-white'
+        {showmoviedetails && <button className='px-1 md:px-4 md:h-12 bg-green-700 my-2 mr-2 md:mx-4 rounded-lg text-white'
         onClick={handlebrowse}>browse</button>}
         
-        <button className=' px-4 h-12 bg-green-700 my-2  mx-4 rounded-lg text-white'
+        <button className='px-1  md:px-4 md:h-12 bg-green-700 my-2 mr-2 md:mx-4 rounded-lg text-white'
         onClick={handlegptsearch}>
           {showgptsearch ? "HomePage" : "GPT Search"}
           </button>
-      <img className='w-12 h-12 mr-3 ' src={user?.photoURL} alt='Profile'></img>
-            <button  onClick={handlesignout} className='font-semibold text-xl text-white'>Sign Out</button>
+      <img className='w-12 h-12 mr-3 rounded-full' src={user?.photoURL} alt='Profile'></img>
+            <button  onClick={handlesignout} className='font-semibold md:text-xl text-white'>Sign Out</button>
        </div>)}
     </div>
   )

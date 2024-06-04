@@ -33,7 +33,7 @@ const Moviedetails = () => {
      
       
    
-  return (moviecredit && <div className=' bg-black'>
+  return (moviecredit && <div className=' h-screen bg-black'>
   
     <Moviepage/>
    </div>

@@ -82,4 +82,7 @@
 //for add the data in movecard we add handlefunction we store this data in redux store(movieslice->  moviepagedata ,showmoviedetails, moviecredit) and do change according it in header , browse component and usie this data in moviepage
 
 //we do memolization (it means no make api call if we have already thata data in redux store ) therefore do some changes in all the component where you do api call
+
+//make website responsive 
+//in that md: is for desktop and default css is for mobile phone(small screen)
       

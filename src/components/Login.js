@@ -105,12 +105,12 @@ const Login = () => {
        
             <div className=' absolute'>
             <div className=' absolute inset-0 bg-black bg-opacity-45'></div>
-            <img  src={BG_IMG} alt='Background '></img>
+            <img  className='h-screen object-cover md:h-full' src={BG_IMG} alt='Background '></img>
             </div>
         
        
            
-             <form onSubmit={(e)=>e.preventDefault()} className=' absolute w-1/4 p-12 bg-black my-36 mx-auto right-0 left-0 text-white bg-opacity-70'>
+             <form onSubmit={(e)=>e.preventDefault()} className=' absolute mx-12 md:w-1/4 p-12 bg-black my-36 md:mx-auto right-0 left-0 text-white bg-opacity-70'>
               <h1 className='mx-2 font-bold text-3xl pb-4'>{issign ? "Sign In":"Sign Up"}</h1>
               {!issign && <input ref={name} type='text' placeholder='Full Name'
                      className='p-4 mx-2 my-2 w-11/12 rounded-md bg-gray-900 border'/>}

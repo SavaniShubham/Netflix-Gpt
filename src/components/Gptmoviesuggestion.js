@@ -8,7 +8,7 @@ const Gptmoviesuggestion = () => {
   const { geminimoviesresult , geminimovienames } = gemini ;
     if(!geminimovienames) return null;
     return (
-    <div className=' w-screen p-4 m-4 bg-black bg-opacity-70 rounded-md'>
+    <div className=' w-screen p-4 m-4  bg-black bg-opacity-70 rounded-md'>
       {
         geminimovienames.map((moviename , index)=> (
 

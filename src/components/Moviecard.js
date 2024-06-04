@@ -17,7 +17,7 @@ const Moviecard = ({posterpath , showmovie}) => {
       
     }
   return (posterpath && (
-    <div className=' w-52 pr-4' onClick={()=> { !moviepagedata && makemoviepage()}}>
+    <div className='w-36 md:w-52 pr-4' onClick={()=> { !moviepagedata && makemoviepage()}}>
     <img alt='Movie card' className=' h-72'
         src={IMG_cdn_URL + posterpath} />
         </div>)
